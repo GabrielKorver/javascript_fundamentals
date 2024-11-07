@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // FORMATAÇÃO DE STRINGS/TEXTO
+
+        var nome = prompt('Digite seu nome');
+        document.write(`Seu nome <strong>${nome}</strong> tem ${nome.length} letras. </br>`);  //document.write mostra na tela / length mostra quantos caracteres tem a string
+
+        document.write(`Seu nome ${nome} em MAIUSCULO FICA: <strong>${nome.toUpperCase()}</strong></br>`);
+        document.write(`Seu nome ${nome} em minusculo FICA: <strong>${nome.toLowerCase()}</strong></br>`);
+
+        //FORMATAÇÃO DE NUMERO
+
+        const salario = 1545.00;
+        document.write(`Seu salario é: <strong>${salario.toFixed(2)}</strong></br>`); // tofixed deixa as casas decimais depois da virgula.
+
+        document.write(`Seu salario é: <strong>${salario.toFixed(2).replace('.', ',')}</strong> Trocado para virgula.</br>`); // .replace, troca o ponto por virgula.
+
+        document.write(`Seu salario é: ${salario.toLocaleString('pt-BR', {style:"currency", currency:'BRl',} )}, Formato da moeda em cada pais. `) // formato da moeda em cada pais.
+
+    </script>
+</body>
+</html>

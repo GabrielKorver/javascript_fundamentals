@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de votação</title>
+</head>
+
+<body>
+    <h1>Sistema de idade para votação.</h1>
+
+    <label for="numero">Idade:</label>
+    <input type="number" name="numero" id="numero">
+
+    <input type="button" value="Executar" onclick="clicar()">
+    <br>
+    <br>
+    
+    <div id="res"></div>
+
+    <script>
+        function clicar() {
+            let idade = document.querySelector('#numero').value;
+            let resultado = document.querySelector('#res');
+
+            if(idade < 16){
+                resultado.innerHTML = `Sua idade é <strong>${idade}</strong> anos, VOCÊ NÃO VOTA!`
+            } else if ((idade >= 16 && idade <18) || idade >=70){
+                resultado.innerHTML = `Sua idade é <strong>${idade}</strong> anos, VOTO OPCIONAL!`
+            } else {
+                resultado.innerHTML = `Sua idade é <strong>${idade}</strong> anos, VOTO OBRIGATÓRIO!`
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

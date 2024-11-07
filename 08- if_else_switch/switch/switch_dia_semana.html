@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch de horas</title>
+</head>
+
+<body>
+    <h1>DIA DA SEMANA</h1>
+
+    <label for="diaSemana">Dia da Semana:</label>
+    <input type="text" id="diaSemana" readonly>
+    <input type="button" value="Executar" onclick="clique()">
+    <br>
+    <br>
+    <div id="res"></div>
+
+    <script>
+
+        function clique() {
+
+            let dia = new Date();
+            let hoje = dia.getDay();
+            let txt = document.querySelector('#diaSemana');
+            let resultado = document.querySelector('#res')
+            
+
+            txt.value = hoje;
+
+            switch (hoje) {
+                case 0:
+                    txt.value = `Domingo`
+                    break;
+
+                case 1:
+                    txt.value = `Segunda-Feira`
+                    break;
+
+                case 2:
+                    txt.value = `Terça-Feira`
+                    break;
+
+                case 3:
+                    txt.value = `Quarta-Feira`
+                    break;
+
+                case 4:
+                    txt.value = `Quinta-Feira`
+                    break;
+
+                case 5:
+                    txt.value = `Sexta-Feira`
+                    break;
+
+                case 6:
+                    txt.value = `Sabado`
+                    break;
+
+                default:
+                    console.log('[Erro] dia inválido.')
+            }
+
+            resultado.innerHTML = `<strong> ${txt.value} </strong>`
+
+        }
+        
+
+    </script>
+
+</body>
+
+</html>

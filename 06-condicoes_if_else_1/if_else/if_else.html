@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de País</title>
+</head>
+
+<body>
+    <h1>Sistema de País</h1>
+
+    <label for="txtp">Digite o País:</label>
+    <input type="text" id="txtp">
+    <input type="button" value="Executar" onclick="clicar()">
+    <br>
+    <br>
+
+    <span id="res"></span>
+
+    <script> 
+        function clicar(){
+            let pais = document.querySelector('#txtp').value.toUpperCase();
+            let resultado = document.querySelector('#res');
+
+            if (pais == 'BRASIL'){
+                resultado.innerHTML = `Seu país é <strong>${pais}</strong>, você é Brasileiro.` 
+            } else {
+                resultado.innerHTML = `Seu país é <strong>${pais}</strong>, você é Estrangeiro.` 
+            }
+            
+
+        }
+    </script>
+
+
+</body>
+
+</html>

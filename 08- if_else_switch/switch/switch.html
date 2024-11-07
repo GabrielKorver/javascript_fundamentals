@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA DE TECNOLOGIA</title>
+</head>
+<body>
+    <h1>SISTEMA DE TECNOLOGIA</h1>
+    <label for="tec">Tecnologia:</label>
+    <input type="text" id="tec">
+    <input type="button" value="Executar" onclick="clique_exec()">
+    <br>
+    <br>
+    <div id="res"></div>
+    
+
+    <script>
+        function clique_exec(){
+            let txt = document.querySelector('#tec').value.toUpperCase();
+            let resultado = document.querySelector('#res');
+            
+            switch(txt){
+                case "HTML":
+                resultado.innerHTML = `Sua tecnologia preferida é <strong>${txt}</strong>, que é utilizada para estruturar seu site.`;
+            break;
+
+            case "CSS":
+                resultado.innerHTML = `Sua tecnologia preferida é <strong>${txt}</strong>, que estiliza e da vida ao seu site.`;
+            break;
+
+            case "JAVASCRIPT":
+                resultado.innerHTML = `Sua tecnologia preferida é <strong>${txt}</strong>, linguagem de programação de tipagem fraca, porem muita dinamica na web.`;
+            break;
+
+            case "TYPESCRIPT":
+                resultado.innerHTML = `Sua tecnologia preferida é <strong>${txt}</strong>, superset JAVASCRIPT, que auxilia no seu código.`;
+            break;
+
+            case "REACT":
+                resultado.innerHTML = `Sua tecnologia preferida é <strong>${txt}</strong>, biblioteca JAVASCRIPT poderosa para construções web.`;
+            break;
+            
+            default:
+            resultado.innerHTML = `[ERRO] Tecnologia desconhecida!`;
+
+            }
+        
+        
+        }
+    </script>
+</body>
+</html>

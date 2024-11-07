@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de horas</title>
+</head>
+
+<body>
+    <h1>HORA ATUAL</h1>
+    <label for="horaAtual">Hora atual:</label>
+    <input type="text" id="horaAtual" readonly>
+    <input type="button" value="Hora atual" onclick="clickhora()">
+    <br>
+    <br>
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function clickhora() {
+            let horarioAtual = new Date();
+            let hora = horarioAtual.getHours();
+            let minutos = horarioAtual.getMinutes();
+            let segundos = horarioAtual.getSeconds();
+            let hcompleta = `${hora}:${minutos}:${segundos}`
+            let inphora = document.getElementById('horaAtual');
+            inphora.value = hcompleta;
+
+            let resultado = document.getElementById('res')
+
+            if (hora >= 0 && hora < 12) {
+                resultado.innerHTML = "<strong>BOM DIA.</stron>";
+            } else if (hora >= 12 && hora < 18) {
+                resultado.innerHTML = `<strong>BOA TARDE.</strong>`;
+            } else {
+                resultado.innerHTML = "<strong>BOA NOITE.</strong>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
