@@ -36,7 +36,7 @@ function verificar() {
             genero = "Mulher"
             if (idade >= 0 && idade < 10) {
                 img.setAttribute('src', './img/bebe-menina.jpg')
-                faixa.innerHTML = "Você é uma <strong>CRIANÇA bebe.</strong>"
+                faixa.innerHTML = "Você é uma <strong>CRIANÇA.</strong>"
             } else if (idade < 21) {
                 img.setAttribute('src', './img/jovem-mulher.jpg')
                 faixa.innerHTML = "Você é uma <strong>JOVEM.</strong>"
